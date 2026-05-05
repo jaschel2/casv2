@@ -29,5 +29,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: MAT267CAS
-        path: bin/MAT267CAS.8xp
+        path: bin/MAT267.8xp
         retention-days: 30
