@@ -278,7 +278,7 @@ void ui_key(kb_lkey_t r1, kb_lkey_t r2, kb_lkey_t r3,
     if (G.screen == SCR_COORDS) {
         if (r1 & kb_Up)      { if (G.coords > 0) G.coords--; }
         if (r1 & kb_Down)    { if (G.coords < 2) G.coords++; }
-        if (r1 & kb_Yeq)     G.coords = COORD_CART;
+        if (r1 & kb_Yequ)     G.coords = COORD_CART;
         if (r1 & kb_Window)  G.coords = COORD_CYL;
         if (r1 & kb_Zoom)    G.coords = COORD_SPH;
         if ((r1 & kb_Graph) || (r7 & kb_Enter)) {
@@ -308,7 +308,7 @@ void ui_key(kb_lkey_t r1, kb_lkey_t r2, kb_lkey_t r3,
         if (r3 & kb_Clear)   { G.screen = SCR_MENU; return; }
 
         /* soft keys: Y= Window Zoom Trace Graph */
-        if (r1 & kb_Yeq)    { field_backspace(); return; }   /* DEL */
+        if (r1 & kb_Yequ)    { field_backspace(); return; }   /* DEL */
         if (r1 & kb_Window) { field_clear();     return; }   /* CLR */
         if (r1 & kb_Zoom)   { field_append_str("pi"); return; } /* PI */
         if (r1 & kb_Trace)  { field_negate();   return; }    /* NEG */
