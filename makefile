@@ -2,7 +2,7 @@
 # MAT267 CAS for TI-84 Plus CE
 # ----------------------------
 
-NAME = MAT267CAS
+NAME = MAT267
 DESCRIPTION = "MAT267 CAS Calculator"
 
 # Source files — toolchain auto-finds all .c in src/
