@@ -262,7 +262,7 @@ void ui_key(kb_lkey_t r1, kb_lkey_t r2, kb_lkey_t r3,
 
     /* ── ORIENT ── */
     if (G.screen == SCR_ORIENT) {
-        if ((r1 & kb_Yeq)    || (r1 & kb_Up))   G.orient =  1;
+        if ((r1 & kb_Yequ)    || (r1 & kb_Up))   G.orient =  1;
         if ((r1 & kb_Window) || (r1 & kb_Down))  G.orient = -1;
         if ((r1 & kb_Graph)  || (r7 & kb_Enter)) {
             fields_load(G.op, G.coords);
@@ -343,10 +343,10 @@ void ui_key(kb_lkey_t r1, kb_lkey_t r2, kb_lkey_t r3,
         if (r4 & kb_Sin)  { field_append_str("sin(");  return; }
         if (r4 & kb_Cos)  { field_append_str("cos(");  return; }
         if (r4 & kb_Tan)  { field_append_str("tan(");  return; }
-        if (r4 & kb_Sqrt) { field_append_str("sqrt("); return; }
+        if (r4 & kb_Math) { field_append_str("sqrt("); return; }
 
         /* variable keys */
-        if (r2 & kb_Xt)   { field_append('x'); return; }  /* X,T,θ,n */
-        if (r2 & kb_Store){ field_append('y'); return; }  /* STO→ as y proxy */
+        if (r2 & kb_Ln)   { field_append('x'); return; }  /* X,T,θ,n */
+        if (r2 & kb_Sto){ field_append('y'); return; }  /* STO→ as y proxy */
     }
 }
